@@ -48,10 +48,8 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 ダヂヅデド　バビブベボ
 「」・。．
 ←→↑↓■●◆♥♠▩
-┏┳━┓  ┌─┬┐
-┣╋━┫  │　││
-┃┃　┃  ├─┼┤
-┗┻━┛  └─┴┘
+╋┗┛┣┻┏┓┫┳━┃
+┼└┘├┴┌┐┤┬─│
 ```
 
 ## 使用方法
@@ -75,13 +73,13 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 ```
 ## マップ作成、定義の削除・追加について
 
-- CHARAMAP 作成は [charmap.py](charmap.py)で行っています。
+- CHARAMAP 作成は [charamap.py](charamap.py)で行っています。
 - 定義を修正するにはこのスクリプトを修正するか、直接 [mz700.json](mz700.json) を修正します。
 - このスクリプトを実行すると、動作確認用アセンブラソース [charamap_test.asm](charamap_text.asm) も生成します。
 
 ## 動作確認用アセンブラソースと実行結果
 
-- ソース [charmp_test.asm](charamap_test.asm)
+- ソース [charamp_test.asm](charamap_test.asm)
 - 実行結果
 ![charamap_test.png](charamap_test.png)
 
