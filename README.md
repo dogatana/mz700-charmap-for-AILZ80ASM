@@ -83,7 +83,7 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 - 実行結果
 ![charamap_test.png](charamap_test.png)
 
-## おまけ: mz700fon.txt 不具合
+## おまけ: mz700fon.txt グリフ定義の課題
 
 AKDさんのサイト
 [MZ-700WIN,EmuZ-700/1500フォントデータの作成](http://mzakd.cool.coocan.jp/starthp/subpage15.html)
