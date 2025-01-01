@@ -75,7 +75,7 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 
 - CHARAMAP 作成は [charamap.py](charamap.py)で行っています。
 - 定義を修正するにはこのスクリプトを修正するか、直接 [mz700.json](mz700.json) を修正します。
-- このスクリプトを実行すると、動作確認用アセンブラソース [charamap_test.asm](charamap_text.asm) も生成します。
+- このスクリプトを実行すると、動作確認用アセンブラソース [charamap_test.asm](charamap_test.asm) も生成します。
 
 ## 動作確認用アセンブラソースと実行結果
 
