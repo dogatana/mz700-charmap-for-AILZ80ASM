@@ -48,7 +48,7 @@ def main():
     set_extra(charmap)
 
     dump_json(charmap, "mz700.json")
-    write_testdata("charmap_test.asm")
+    write_testdata("charamap_test.asm")
 
 def set_ascii(charmap):
     # 0x20
