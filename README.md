@@ -79,7 +79,7 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 
 ## 動作確認用アセンブラソースと実行結果
 
-- ソース [charamp_test.asm](charamap_test.asm)
+- ソース [charamap_test.asm](charamap_test.asm)
 - 実行結果
 ![charamap_test.png](charamap_test.png)
 
