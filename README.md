@@ -57,7 +57,7 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 1. 本リポジトリの [mz700.json](mz700.json) をアセンブラソースと同じフォルダに保存する。(※)
 2. アセンブラソース上で
     - CHARMAP を定義する。
-    - DB 疑似命令で文字列リテラルを定義する際、定義したCHARMAP を適用する。
+    - ~~DB 疑似命令で~~文字列リテラルを定義する際、定義したCHARMAP を適用する。
 
 ※ json の保存場所は変更できると思いますが、方法詳細については AILZ80ASM のドキュメントを
 参照してください。
@@ -69,7 +69,8 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
     charmap @MZ700,"mz700.json"
 
     ; charmap の適用
-    db   @MZ700:"HELLO MZ-700!"
+    db  @MZ700:"HELLO MZ-700!"
+    ld  a, @MZ700:"@"
 ```
 ## マップ作成、定義の削除・追加について
 
@@ -85,12 +86,10 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 
 ## ~~おまけ: mz700fon.txt グリフ定義の課題~~
 
-<div style="color:red;margin-bottom:1em">
-本項の記載は誤っていました。
+**本項の記載は誤っていました。
 AKD さんのサイトの記載の作成方法のままで
-正しいグリフのフォントを作成することができます。
-情報をいただいた AKD さんに感謝します。
-</div>
+正しいグリフのフォントを作成することができます。<br>
+情報をいただいた AKD さんに感謝します。**
 
 ~~AKDさんのサイト
 [MZ-700WIN,EmuZ-700/1500フォントデータの作成](http://mzakd.cool.coocan.jp/starthp/subpage15.html)
