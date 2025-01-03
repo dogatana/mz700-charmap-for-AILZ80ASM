@@ -1,26 +1,26 @@
-# MZ-700 CHARAMAP for AILZ80ASM
+# MZ-700 CHARMAP for AILZ80ASM
 
 ## はじめに
 
-https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラには CHARAMAP 
+https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラには CHARMAP 
 という素敵な機能があります。
 この機能は DB 疑似命令で文字列を定義する際に文字列内の各文字をあらかじめ定義しておいてマップ
 （辞書、ハッシュテーブル）に基づいて変換するものです。
 
-そこで、SHARP MZ-700 用の CHARAMAP を作成してみました。この CHARAMAP を使用することで、
+そこで、SHARP MZ-700 用の CHARMAP を作成してみました。この CHARMAP を使用することで、
 - アセンブラソース上では通常のキャラクタコードを使用し文字列を定義
 - アセンブル時にキャラクタコードからディスプレイコードに変換
 - アセンブル結果としてディスプレイコードを出力
 
 することができ、アセンブラソースの可読性向上が期待できます。
 
-なお、本 CHARAMAP では、全角文字からの変換を定義しているので、
+なお、本 CHARMAP では、全角文字からの変換を定義しているので、
 アセンブラソース上で後述の例のような罫線文字を利用した
 画面を目視可能な状態で記述することができます。
 
-### CHARAMAP 定義内容
+### CHARMAP 定義内容
 
-本 CHARAMAP でディスプレイコードに置き換え可能な文字は次のとおりです。
+本 CHARMAP でディスプレイコードに置き換え可能な文字は次のとおりです。
 
 - ASCII 0x20(`␣`) から 0x5D(`]`)。英小文字は英大文字にマップ
 - 上述の ASCII の全角文字
@@ -56,8 +56,8 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 
 1. 本リポジトリの [mz700.json](mz700.json) をアセンブラソースと同じフォルダに保存する。(※)
 2. アセンブラソース上で
-    - CHARAMAP を定義する。
-    - DB 疑似命令で文字列リテラルを定義する際、定義したCHARAMAP を適用する。
+    - CHARMAP を定義する。
+    - DB 疑似命令で文字列リテラルを定義する際、定義したCHARMAP を適用する。
 
 ※ json の保存場所は変更できると思いますが、方法詳細については AILZ80ASM のドキュメントを
 参照してください。
@@ -65,23 +65,23 @@ https://github.com/AILight/AILZ80ASM で公開されているZ80アセンブラ�
 ## 使用例
 
 ```
-    ; charamap の定義
-    charamap @MZ700,"mz700.json"
+    ; charmap の定義
+    charmap @MZ700,"mz700.json"
 
-    ; charamap の適用
+    ; charmap の適用
     db   @MZ700:"HELLO MZ-700!"
 ```
 ## マップ作成、定義の削除・追加について
 
-- CHARAMAP 作成は [charamap.py](charamap.py)で行っています。
+- CHARMAP 作成は [charmap.py](charmap.py)で行っています。
 - 定義を修正するにはこのスクリプトを修正するか、直接 [mz700.json](mz700.json) を修正します。
-- このスクリプトを実行すると、動作確認用アセンブラソース [charamap_test.asm](charamap_test.asm) も生成します。
+- このスクリプトを実行すると、動作確認用アセンブラソース [charmap_test.asm](charmap_test.asm) も生成します。
 
 ## 動作確認用アセンブラソースと実行結果
 
-- ソース [charamap_test.asm](charamap_test.asm)
+- ソース [charmap_test.asm](charmap_test.asm)
 - 実行結果
-![charamap_test.png](charamap_test.png)
+![charmap_test.png](charmap_test.png)
 
 ## ~~おまけ: mz700fon.txt グリフ定義の課題~~
 
