@@ -17,7 +17,7 @@ def set_ascii(charmap):
     # 0x20 - 0x7e を全角文字も含めて登録
     for code in range(0x20, 0x7f):
         c = chr(code)
-        charmap[c] = charmap[jaconv.han2zen(c)] = [code]
+        charmap[c] = charmap[jaconv.han2zen(c, ascii=True, digit=True)] = [code]
 
 def set_kana(charmap: dict):
     for code in range(0xa1, 0xe0):
