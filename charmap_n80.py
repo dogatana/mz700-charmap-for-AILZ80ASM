@@ -67,6 +67,7 @@ def set_extra(charmap: dict):
     charmap["♣"]= [0xeb]
     charmap["●"]= [0xec]
     charmap["〇"]= [0xed]
+    charmap["■"]= [0x87]
 
     # 濁点, 半濁点
     charmap["ガ"] = charmap["が"] = charmap["カ"] + charmap["゛"]
