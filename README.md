@@ -113,23 +113,10 @@ AKD さんのサイトの記載の作成方法のままで
 
 とある理由で欲しくなったので作成しました。
 
-アセンブラのコマンドラインでのラベル定義と、
-条件アセンブルで次のように MZ700/PC8001 でソースを共通化できるかも？
+アセンブラのコマンドラインでのラベル定義と
+条件アセンブルを組み合わせて次のように MZ700/PC8001 でソースを共通化できるかも？  
 
-
-```
-#if exists PC8001
-                charmap @MAP,"n80.json"
-#elif exists MZ700
-                charmap @MAP,"mz700.json"
-#endif
-
-PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　　　　┏━┓"
-PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　　　　┃８┃"
-PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　┏━┓┗━┛┏━┓"
-PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"ＬＥＦＴ　┃４┃　＋　┃６┃　ＲＩＧＨＴ"
-PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　┗━┛　　　┗━┛"
-```
+![sample](sample.png)
 
 ### 定義内容
 
