@@ -118,11 +118,17 @@ AKD さんのサイトの記載の作成方法のままで
 
 
 ```
-PRINT_XYC 9, 24, 7, "　　　　　　　　┏━┓"
-PRINT_XYC 9, 24, 7, "　　　　　　　　┃８┃"
-PRINT_XYC 9, 24, 7, "　　　　　┏━┓┗━┛┏━┓"
-PRINT_XYC 9, 24, 7, "ＬＥＦＴ　┃４┃　＋　┃６┃　ＲＩＧＨＴ"
-PRINT_XYC 9, 24, 7, "　　　　　┗━┛　　　┗━┛"
+#if exists PC8001
+                charmap @MAP,"n80.json"
+#elif exists MZ700
+                charmap @MAP,"mz700.json"
+#endif
+
+PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　　　　┏━┓"
+PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　　　　┃８┃"
+PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　┏━┓┗━┛┏━┓"
+PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"ＬＥＦＴ　┃４┃　＋　┃６┃　ＲＩＧＨＴ"
+PRINT_XYC 9, 24, ATTR_WHITE, @MAP:"　　　　　┗━┛　　　┗━┛"
 ```
 
 ### 定義内容
